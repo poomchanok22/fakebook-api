@@ -1,5 +1,7 @@
 import express from "express";
 import authRoute from "./routes/auth.route.js";
+import notFoundMiddleware from "./middlewares/not-found.middleware.js";
+import errorMiddlware from "./middlewares/error.middlware.js";
 
 const app = express()
 app.use(express.json())
@@ -11,5 +13,6 @@ app.use("/api/post", (req,res)=> {
 app.use("/api/comment", (req,res)=> res.send("comment service"))
 app.use("/api/like", (req,res)=> res.send("like service"))
 
-
+app.use(notFoundMiddleware)
+app.use(errorMiddlware)
 export default app
