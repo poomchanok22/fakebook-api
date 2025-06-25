@@ -6,7 +6,7 @@ POST http://localhost:8899/api/auth/login HTTP/1.1
 Content-Type: application/json
 
 {
-  "identity" : "andy@ggg.mail",
+  "identity" : "pp222@gmail.com",
     "password" : "123456"
 }
 
@@ -16,8 +16,8 @@ Content-Type: application/json
 
 {
   # "identity":"0616637894",
-  "mobile": "1234567890",
-  "email" : "pp22@gmail.com",
+  "mobile": "9876543210",
+  "email" : "pp222@gmail.com",
   "firstName": "p",
   "lastName" : "cc20",
   "password" : "123456",
