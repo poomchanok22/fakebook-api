@@ -104,21 +104,19 @@ export const login = async(req, res, next) => {
     algorithm: "HS256",
     expiresIn: "15d"
   })
+  // Desturc ตัวที่ไม่ใช้ไว้ เหลือแค่ตัวตัวที่ต้องการส่งให้ front
+  const { password : pw, createdAt, updatedAt, ...userData} = foundUser
+
   res.json({
     msg: "Login Successful",
     token: token ,
+    user: userData
   });
 };
 
 export const getMe = async (req, res, next) => {
-  let numUser = await prisma.user.count();
-  console.log(numUser);
-  createErrorUtil(403, "Block");
-  res.json({
-    msg: "Get me Controller",
-    numUser,
-  });
-};
+res.json({ user: req.user })
+}
 
 // export function getMe() {
 //   return (req, res) => {

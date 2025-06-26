@@ -1,12 +1,13 @@
 ### GetMe
 GET http://localhost:8899/api/auth/me HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzUwOTA5MDU2LCJleHAiOjE3NTIyMDUwNTZ9.6W3951Migb0Ohi-URloX2TJO7Mtslu36jghHQK5DcD8
 
 ### Login
 POST http://localhost:8899/api/auth/login HTTP/1.1
 Content-Type: application/json
 
 {
-  "identity" : "pp222@gmail.com",
+  "identity" : "bobby@ggg.mail",
     "password" : "123456"
 }
 
