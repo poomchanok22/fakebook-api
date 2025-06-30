@@ -102,7 +102,9 @@ export const login = async(req, res, next) => {
   const payload = {id: foundUser.id}
   const token = jwt.sign(payload, process.env.JWT_SECRET, {
     algorithm: "HS256",
-    expiresIn: "15d"
+    expiresIn: "15d",
+    // expiresIn: "2m",
+
   })
   // Desturc ตัวที่ไม่ใช้ไว้ เหลือแค่ตัวตัวที่ต้องการส่งให้ front
   const { password : pw, createdAt, updatedAt, ...userData} = foundUser
@@ -123,3 +125,6 @@ res.json({ user: req.user })
 //     res.json({ message: "me" })
 //   }
 // }
+
+
+

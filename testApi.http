@@ -25,3 +25,15 @@ Content-Type: application/json
   "confirmPassword" : "123456"
 
 }
+
+### getAllPost
+GET http://localhost:8899/api/post HTTP/1.1
+
+
+### createPost
+POST http://localhost:8899/api/post HTTP/1.1
+Content-Type: application/json
+
+{
+ "message": "Hello"
+}
